@@ -66,9 +66,39 @@
       
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
+        <tr onmouseout="msg_stop()" onmouseover="msg_start()">
+          <!-- <td style="padding:20px;width:25%;vertical-align:middle">
             <img src='images/msg-nips24/msg.jpg' width="200">
+          </td> -->
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='msg_after'>
+                <video width=100% height=100% id="msg_video" muted autoplay loop>
+                  <source src="./images/msg-nips24/msg_after.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <img src='./images/msg-nips24/msg.jpg' width="160" height="160" id="msg_image">
+            </div>
+            <script type="text/javascript">
+              
+              function msg_start() {
+                // when mouse is over the image, make the video visible
+                document.getElementById('msg_after').style.opacity = "1";
+                // make the image invisible
+                document.getElementById('msg_image').style.opacity = "0";
+                document.getElementById('msg_video').play(); // somehow this can prevent jittering
+              }
+
+              function msg_stop() {
+                document.getElementById('msg_after').style.opacity = "0";
+                //make the image visible again
+                document.getElementById('msg_image').style.opacity = "1";
+                document.getElementById('msg_video').pause(); // somehow this can prevent jittering
+                document.getElementById('msg_video').currentTime = 0;
+              }
+              msg_stop()
+            </script>
           </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
             <!-- <a href="https://ai4ce.github.io/SeeDo/"> -->
@@ -76,29 +106,59 @@
             <!-- </a> -->
             <br>
             <strong>Juexiao Zhang</strong>, 
-            Gao Zhu,
+            <a href="">Gao Zhu</a>,
             <a href="https://louis-leee.github.io/">Sihang Li</a>, 
             <a href="https://gaaaavin.github.io/">Xinhao Liu</a>, 
-            Haorui Song,
-            Xinran Tang,
+            <a href="">Haorui Song</a>,
+            <a href="">Xinran Tang</a>,
             <a href="https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en">Chen Feng</a>
             <br>
             <em>NeurIPS 2024</em>
             <br>
-            <!-- <a href="">arXiv</a>
+            <a href="https://arxiv.org/abs/2410.11187">arXiv</a>
             /
-            <a href="https://ai4ce.github.io/SeeDo/">project page</a>
+            <a href="https://ai4ce.github.io/MSG/">project page</a>
             /
-            <a href="https://github.com/ai4ce/SeeDo">code</a> -->
-            <em> Camera ready coming soon. </em>
+            <a href="https://github.com/ai4ce/MSG">code</a>
+            <!-- <em> Camera ready coming soon. </em> -->
             <p></p>
             <p>Build multiview place+object scene graph from unposed RGB image set.</p>
           </td>
         </tr>
 
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle">
+        <tr onmouseout="seedo_stop()" onmouseover="seedo_start()">
+          <!-- <td style="padding:20px;width:25%;vertical-align:middle">
             <img src='images/seedo.jpg' width="200">
+          </td> -->
+          <td style="padding:20px;width:25%;vertical-align:middle">
+            <div class="one">
+              <div class="two" id='seedo_after'>
+                <video width=100% height=100% id="seedo_video" muted autoplay loop>
+                  <source src="./images/seedo/seedo_after.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <img src='./images/seedo/seedo.jpg' width="160" height="160" id="seedo_image">
+            </div>
+            <script type="text/javascript">
+              
+              function seedo_start() {
+                // when mouse is over the image, make the video visible
+                document.getElementById('seedo_after').style.opacity = "1";
+                // make the image invisible
+                document.getElementById('seedo_image').style.opacity = "0";
+                document.getElementById('seedo_video').play(); // somehow this can prevent jittering
+              }
+
+              function seedo_stop() {
+                document.getElementById('seedo_after').style.opacity = "0";
+                //make the image visible again
+                document.getElementById('seedo_image').style.opacity = "1";
+                document.getElementById('seedo_video').pause(); // somehow this can prevent jittering
+                document.getElementById('seedo_video').currentTime = 0;
+              }
+              seedo_stop()
+            </script>
           </td>
           <td style="padding:20px;width:75%;vertical-align:middle">
             <a href="https://ai4ce.github.io/SeeDo/">
